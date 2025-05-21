@@ -1,16 +1,22 @@
 ---
+import Header from '../components/Header.astro';
 import '../styles/tailwind.css';
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<!-- Icons -->
+    	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	</head>
-	<body>
-		<slot />
+	<body class="h-full flex flex-col dark:bg-neutral-900">
+		<Header/>
+		<main class="flex-grow">
+			<slot/>
+		</main>
 	</body>
 </html>
